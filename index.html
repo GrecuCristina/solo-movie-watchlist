@@ -1,9 +1,40 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1>index.html</h1>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Roboto:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Find your film</h1>
+      <a href="/watchlist.html">Watchlist</a>
+      <form id="form-id" class="search-form">
+        <div class="search">
+          <img src="images/search-icon-svg.svg" class="search-img icon" />
+          <input
+            type="search"
+            placeholder="Blade Runner"
+            class="search-text"
+            id="searched-text"
+          />
+        </div>
+
+        <button type="submit" class="search-button" id="search-btn">
+          Search
+        </button>
+      </form>
+    </header>
+    <main id="main-id"></main>
+    <script src="index.js"></script>
+  </body>
 </html>
