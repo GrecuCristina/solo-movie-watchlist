@@ -1,4 +1,3 @@
-const moviesFromLocalStorage = JSON.parse(localStorage.getItem("myMovies"));
 const form = document.getElementById("form-id");
 const main = document.getElementById("main-id");
 
@@ -84,6 +83,11 @@ function renderNotFoundMoviesPage() {
 }
 
 function addMovieToWatchlist(movie) {
-  moviesFromLocalStorage.push(movie);
-  localStorage.setItem("myMovies", JSON.stringify(moviesFromLocalStorage));
+  const moviesFromLocalStorage = JSON.parse(localStorage.getItem("myMovies"));
+  if (moviesFromLocalStorage) {
+    moviesFromLocalStorage.push(movie);
+    localStorage.setItem("myMovies", JSON.stringify(moviesFromLocalStorage));
+  } else {
+    localStorage.setItem("myMovies", JSON.stringify(movie));
+  }
 }
