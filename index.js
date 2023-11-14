@@ -88,6 +88,6 @@ function addMovieToWatchlist(movie) {
     moviesFromLocalStorage.push(movie);
     localStorage.setItem("myMovies", JSON.stringify(moviesFromLocalStorage));
   } else {
-    localStorage.setItem("myMovies", JSON.stringify(movie));
+    localStorage.setItem("myMovies", JSON.stringify([movie]));
   }
 }
