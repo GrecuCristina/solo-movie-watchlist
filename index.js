@@ -83,11 +83,11 @@ function renderNotFoundMoviesPage() {
 }
 
 function addMovieToWatchlist(movie) {
-  const moviesFromLocalStorage = JSON.parse(localStorage.getItem("myMovies"));
+  let moviesFromLocalStorage = JSON.parse(localStorage.getItem("myMovies"));
   if (moviesFromLocalStorage) {
+  } else {
+    moviesFromLocalStorage = [];
     moviesFromLocalStorage.push(movie);
     localStorage.setItem("myMovies", JSON.stringify(moviesFromLocalStorage));
-  } else {
-    localStorage.setItem("myMovies", JSON.stringify([movie]));
   }
 }

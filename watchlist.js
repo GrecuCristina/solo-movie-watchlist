@@ -2,6 +2,9 @@ const main = document.getElementById("main-id");
 
 function renderWatchlist() {
   const moviesFromLocalStorage = JSON.parse(localStorage.getItem("myMovies"));
+  if (!moviesFromLocalStorage) {
+    return 0;
+  }
   for (let movie of moviesFromLocalStorage) {
     const movieContentEl = document.createElement("div");
     movieContentEl.classList.add("movie-content");
