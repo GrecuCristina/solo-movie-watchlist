@@ -19,7 +19,7 @@ function renderMovies() {
   loading.setAttribute("id", "loading-id");
   main.append(loading);
 
-  fetch(`http://www.omdbapi.com/?apikey=9118960c&s=${searchedText}`)
+  fetch(`https://www.omdbapi.com/?apikey=9118960c&s=${searchedText}`)
     .then((response) => response.json())
     .then((data) => {
       const searchedMovies = data.Search;
