@@ -85,6 +85,8 @@ function renderNotFoundMoviesPage() {
 function addMovieToWatchlist(movie) {
   let moviesFromLocalStorage = JSON.parse(localStorage.getItem("myMovies"));
   if (moviesFromLocalStorage) {
+    moviesFromLocalStorage.push(movie);
+    localStorage.setItem("myMovies", JSON.stringify(moviesFromLocalStorage));
   } else {
     moviesFromLocalStorage = [];
     moviesFromLocalStorage.push(movie);
