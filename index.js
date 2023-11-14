@@ -29,7 +29,7 @@ function renderMovies() {
       }
       console.log("searched movies", searchedMovies);
       for (let movie of searchedMovies) {
-        fetch(`http://www.omdbapi.com/?apikey=9118960c&i=${movie.imdbID}`)
+        fetch(`https://www.omdbapi.com/?apikey=9118960c&i=${movie.imdbID}`)
           .then((response) => response.json())
           .then((data) => {
             loading.remove();
